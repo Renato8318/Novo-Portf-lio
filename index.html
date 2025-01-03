@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio - Renato</title>
+
+        <!-- Links CSS -->
+        <link rel="stylesheet" href="assets/style.css">
+        <link rel="stylesheet" href="assets/vars.css">
+        <link rel="stylesheet" href="assets/medias-queries.css">
+        
+        <!-- Links JavaScript -->
+        <script src="script.js" defer></script>
+
+        <!-- Link Bootstrap Icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,400;1,500&family=Roboto:wght@100;300;500;700&family=Young+Serif&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="interface">
+                <div id="logo" class="hidden">
+                    <a href="#">
+                        <img src="assets/imagens/perfil..jpeg" alt="Logo">
+                    </a>
+                </div>
+
+                <nav class="menu-desktop hidden">
+                    <ul>
+                        <li><a href="#">Sobre</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#hobbies">Hobbies</a></li>
+                        <li><a href="#projetos">Projetos</a></li>
+                        <li><a href="#conquistas">Conquistas</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+
+                <div class="btn-contatos hidden">
+                    <a href="https://www.linkedin.com/in/renato-paiva2022/" target="_blank"><button><i class="bi bi-linkedin"></i></button></a>
+                    <a href="https://github.com/Renato8318" target="_blank"><button><i class="bi bi-github"></i></button></a>
+                    <a href="https://www.instagram.com/natoo23/" target="_blank"><button><i class="bi bi-instagram"></i></button></a>
+                </div>
+
+                <div class="btn-open" id="btn-menu">
+                    <i class="bi bi-list"></i>
+                </div>
+
+                <div class="menu-mobile" id="menu-mobile">
+                    <div class="btn-close">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">Sobre</a></li>
+                            <li><a href="#skills">Skills</a></li>
+                            <li><a href="#hobbies">Hobbies</a></li>
+                            <li><a href="#projetos">Projetos</a></li>
+                            <li><a href="#conquistas">Conquistas</a></li>
+                            <li><a href="#contato">Contato</a></li>
+                            <li><a href="https://www.linkedin.com/in/renato-paiva2022/" target="_blank">Linkedin</a></li>
+                            <li><a href="https://github.com/Renato8318" target="_blank">GitHub</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="overlay-menu" id="overlay-menu"></div>
+            </div>
+        </header>
+
+        <main>
+            <section class="topo-site hidden">
+                <div class="interface">
+                    <div class="flex">
+                        <div class="txt-topo-site">
+                            <h1 id="greeting"></h1>
+                            <p>Prazer, seja bem-vindo ao meu portfólio web. Sou <strong>Analista de Suporte</strong> e apaixonado por tecnologia, sempre em busca de novos desafios na área de <strong>Desenvolvimento de Software</strong>. Com experiência prática em <span style="color: #C73EEE;">programação front-end</span>, busco aplicar minhas habilidades em tecnologias como HTML, CSS, JavaScript e React para criar soluções eficientes e impactantes.</p>
+                        </div>
+
+                        <div class="img-topo-site">
+                            <img src="assets/imagens/perfil..jpeg" alt="Perfil">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="skills hidden" id="skills">
+                <div class="interface">
+                    <h2 class="title">Skills</h2>
+                    <div class="flex">
+                        <div class="box">
+                            <i class="bi bi-filetype-html"></i>
+                            <h3>HTML</h3>
+                            <p>Conhecimento em HTML, utilizado para estruturar o conteúdo das páginas web.</p>
+                        </div>
+                        <div class="box">
+                            <i class="bi bi-filetype-css"></i>
+                            <h3>CSS</h3>
+                            <p>Experiência com CSS, incluindo layout responsivo, animações e design moderno.</p>
+                        </div>
+                        <div class="box">
+                            <i class="bi bi-filetype-js"></i>
+                            <h3>JavaScript</h3>
+                            <p>Desenvolvimento de funcionalidades dinâmicas em páginas web utilizando JavaScript e frameworks como React.</p>
+                        </div>
+                        <div class="box">
+                            <i class="bi bi-git"></i>
+                            <h3>GIT</h3>
+                            <p>Controle de versões de projetos utilizando Git, garantindo um fluxo de desenvolvimento ágil e colaborativo.</p>
+                        </div>
+                        <div class="box">
+                            <i class="bi bi-github"></i>
+                            <h3>GITHUB</h3>
+                            <p>Hospedagem de projetos no GitHub, facilitando a colaboração e o compartilhamento de código.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="hobbies hidden" id="hobbies">
+                <div class="interface">
+                    <h2 class="title">Hobbies</h2>
+                    <div class="flex">
+                        <div class="box">
+                            <i class="bi bi-headphones"></i>
+                            <h3>Ouvir música</h3>
+                        </div>
+                        <div class="box">
+                            <i class="bi bi-tv"></i>
+                            <h3>Assistir filmes e séries</h3>
+                        </div>
+                        <div class="box">
+                            <i class="bi bi-person-walking"></i>
+                            <h3>Caminhar e Esportes</h3>
+                        </div>
+                        <div class="box">
+                            <i class="bi bi-controller"></i>
+                            <h3>Jogar</h3>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="projetos hidden" id="projetos">
+                <div class="interface">
+                    <h2 class="title">Projetos</h2>
+                    <div class="flex">
+                        <div class="img-projetos" style="background-image: url(./assets/imagens/AluraPlus.png);">
+                            <div class="overlay"><a href="https://github.com/Renato8318/Alura-Plus" target="_blank">Alura-Plus</a></div>
+                        </div>
+                        <div class="img-projetos" style="background-image: url(./assets/imagens/AluraBooks.png);">
+                            <div class="overlay"><a href="https://github.com/Renato8318/AluraBooks" target="_blank">AluraBooks</a></div>
+                        </div>
+                        <div class="img-projetos" style="background-image: url(./assets/imagens/AluraMidi.png);">
+                            <div class="overlay"><a href="https://github.com/Renato8318/Alura-Midi" target="_blank">AluraMidi</a></div>
+                        </div>
+                        <div class="img-projetos" style="background-image: url(./assets/imagens/ListadeCompras.png);">
+                            <div class="overlay"><a href="https://github.com/Renato8318/Lista-de-Compras" target="_blank">Lista-de-Compras</a></div>
+                        </div>
+                        <div class="img-projetos" style="background-image: url(./assets/imagens/MatchingGame.png);">
+                            <div class="overlay"><a href="https://github.com/Renato8318/RetroMatch" target="_blank">RetroMatch</a></div>
+                        </div>
+                        <div class="img-projetos" style="background-image: url(./assets/imagens/AluraNewsletter.png);">
+                            <div class="overlay"><a href="https://github.com/Renato8318/Alura-newsletter-" target="_blank">AluraNewsletter</a></div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section class="conquistas hidden" id="conquistas">
+                <div class="interface">
+                    <h2 class="title">Conquistas</h2>
+                    <div class="flex">
+                        <div class="img-conquistas">
+                            <img src="assets/imagens/Certificado1.png" alt="Certificado 1">
+                        </div>
+                        <div class="img-conquistas">
+                            <img src="assets/imagens/Certificado2.png" alt="Certificado 2">
+                        </div>
+                        <div class="img-conquistas">
+                            <img src="assets/imagens/Certificado3.png" alt="Certificado 3">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contato hidden" id="contato">
+                <div class="interface">
+                    <h2 class="title">Contato</h2>
+                    <div class="flex">
+                        <span>Quer entrar em contato comigo? Preencha o formulário abaixo, e entrarei em contato o mais rápido possível.</span>
+
+                        <form class="contato__formulario" data-formulario>
+                            <div>
+                                <input type="text" name="nome" placeholder="Nome" minlength="3" required>
+                                <span class="mensagem-erro"></span>
+                            </div>
+                            <div>
+                                <input type="email" name="email" placeholder="E-mail" minlength="4" required>
+                                <span class="mensagem-erro"></span>
+                            </div>
+                            <div>
+                                <input type="text" name="assunto" placeholder="Assunto" maxlength="50" required>
+                                <span class="mensagem-erro"></span>
+                            </div>
+                            <div>
+                                <textarea name="mensagem" id="mensagem" placeholder="Mensagem" maxlength="500" required></textarea>
+                                <span class="mensagem-erro"></span>
+                            </div>
+                            
+                            <div class="contato__formulario__btn">
+                                <button type="submit">Enviar mensagem</button>
+                                <span class="mensagem-erro"></span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="contato.js" type="module"></script>
+    </body>
+</html>

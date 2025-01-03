@@ -1,0 +1,480 @@
+/* Formatação Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+}
+
+body {
+    background-color: #121212; /* Mantendo fundo escuro */
+    color: #fff; /* Cor do texto padrão */
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Ícones de Contatos */
+.btn-contatos button {
+    border-radius: 50% 20%;
+    margin: 0 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #fff;
+    color: #121212; /* Cor do texto */
+    border-color: #ffffff; /* Borda branca */
+    transition: .2s;
+}
+
+.btn-contatos button i {
+    font-size: 25px;
+    color: #121212; /* Cor dos ícones visíveis */
+}
+
+/* Hover nos botões */
+.btn-contatos button:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    color: #fff;
+    background-image: linear-gradient(145deg, #ff7ce9 0, #ff70eb 16.67%, #ff5de8 33.33%, #dc45e1 50%, #b42fda 66.67%, #8c27d7 83.33%, #6129d8 100%);
+    border: none;
+}
+
+.btn-contatos button:hover i {
+    color: #ff00b3; /* Cor ao passar o mouse (roxa) */
+}
+
+/* Cabeçalho */
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo img {
+    width: 60px;
+}
+
+header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: #ff7ce9;
+    transform: scale(1.05);
+    border-bottom: 2px solid #ff7ce9;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* Menu Mobile */
+.btn-open i {
+    color: #fff;
+    font-size: 40px;
+}
+
+.menu-mobile {
+    background-color: #121212;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 0%;
+    overflow: hidden;
+    transition: .4s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: flex;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #ff7ce9;
+    color: #121212;
+}
+
+.menu-mobile .btn-close {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-close i {
+    color: #fff;
+    font-size: 30px;
+}
+
+.overlay-menu {
+    width: 70%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ----- Main------ */
+/* Topo do site */
+main .img-topo-site img {
+    width: 300px;
+    border-radius: 60px 20px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+section.topo-site {
+    padding: 40px 4%;
+}
+
+section.topo-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+}
+
+.topo-site .txt-topo-site h1 {
+    color: #fff;
+}
+
+.topo-site .txt-topo-site p {
+    margin: 30px 0;
+}
+
+/* Aplicando animação na imagem Perfil */
+@keyframes flutuacao {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+.topo-site .img-topo-site img {
+    position: relative;
+    animation: flutuacao 2s ease-in-out infinite alternate;
+}
+
+/* Section Skills */
+section.skills {
+    margin-top: 20px;
+    padding: 40px 4%;
+    background: #1a1a1a;
+}
+
+section.skills .flex {
+    gap: 60px;
+}
+
+.skills .box {
+    color: #fff;
+    width: 250px;
+    padding: 30px;
+    margin-top: 40px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.skills .box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.skills .box i {
+    font-size: 50px;
+    color: #ff7ce9;
+}
+
+.skills .box h3 {
+    font-size: 22px;
+    margin: 15px 0;
+}
+
+/* Section Hobbies */
+section.hobbies {
+    margin-top: 20px;
+    padding: 40px 4%;
+}
+
+section.hobbies .flex {
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.hobbies h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.hobbies i {
+    font-size: 25px;
+}
+
+.hobbies .box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 250px;
+    padding: 30px;
+    margin-top: 40px;
+    border: 3px solid #fff;
+    transition: .4s;
+}
+
+.hobbies:hover .box:hover {
+    background-image: linear-gradient(145deg, #ff7ce9 0, #ff70eb 16.67%, #ff5de8 33.33%, #dc45e1 50%, #b42fda 66.67%, #8c27d7 83.33%, #6129d8 100%);
+    color: #fff;
+    border-radius: 20px;
+    border: none;
+    transition: .7s;
+}
+
+/* Section projetos */
+section.projetos {
+    background: #121212;
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.5);
+}
+
+section.projetos .flex {
+    flex-wrap: wrap;
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.img-projetos {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 40px;
+    position: relative;
+    border: 1px solid #fff;
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    cursor: pointer;
+}
+
+/* Animação contínua para carrossel */
+@keyframes carrossel-move {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(15px); /* Move um pouco para a direita */
+    }
+    100% {
+        transform: translateX(-15px); /* Move um pouco para a esquerda */
+    }
+}
+
+section.projetos .img-projetos:hover {
+    animation: carrossel-move 0.8s infinite alternate ease-in-out;
+}
+
+section.projetos h2 {
+    color: #fff;
+}
+
+/* Overlay de foco na imagem */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay a {
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* Section Conquistas */
+section.conquistas {
+    margin-top: 20px;
+    padding: 40px 4%;
+    background: #1a1a1a;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+section.conquistas .flex {
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.conquistas .img-conquistas img {
+    max-width: 350px;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+/* Section Contato */
+section.contato {
+    margin-top: 20px;
+    padding: 40px 4%;
+    background: #121212;
+}
+
+section.contato .flex {
+    padding-top: 20px;
+    gap: 20px;
+}
+
+.contato h2 {
+    color: #fff;
+}
+
+.contato span {
+    font-size: 16px;
+}
+
+.contato__formulario {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    gap: 25px;
+    margin: 0 auto;
+}
+
+.contato__formulario input {
+    width: 600px;
+    height: 56px;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.contato__formulario textarea {
+    width: 600px;
+    height: 200px;
+    resize: none;
+    padding: 10px;
+}
+
+.contato__formulario input:focus,
+textarea:focus {
+    outline: none;
+}
+
+.contato__formulario input::placeholder,
+textarea::placeholder {
+    padding-left: 10px;
+}
+
+.contato__formulario input,
+textarea {
+    border: 1px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.61) 0px 3px 8px;
+}
+
+.contato__formulario button {
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    background: #fff;
+    color: #121212;
+    border: 1px solid #fff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .2s;
+}
+
+.contato__formulario button:hover {
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+    color: #ff7ce9;
+}
+
+.mensagem-erro {
+    color: #ff4d4d;
+}
+
+.contato__formulario__btn {
+    display: flex;
+}
+
+.contato__formulario>div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.agradecimento {
+    flex-direction: column;
+    text-align: center;
+}
+
+.agradecimento img {
+    width: 250px;
+    border-radius: 50%;
+}
+
+/* Animações */
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateX(-100%);
+    transition: all 3s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
+
+
+
+
+

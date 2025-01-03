@@ -1,0 +1,11 @@
+:root {
+    --background-body: rgb(255, 255, 255);
+    --color-white: #FFF;
+    --color-principal: #C73EEE;
+    --color-hover-link: #e38ffb;
+    --color-hover-box: #c83eee62;
+    --color-black: #000;
+    --color-overlay: #00000028;
+    --color-border-projetos: #e48ffb42;
+    --mensagem-erro: red;
+}

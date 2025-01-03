@@ -43,9 +43,9 @@ const currentHour = new Date().getHours();
 // Verificar horas e mostrar mensagem
 const greetingMessage =
   currentHour >= 5 && currentHour < 12
-    ? "Bom dia! Sou Renato"
+    ? "Olá,Bom dia! Sou Renato Paiva"
     : currentHour >= 12 && currentHour < 18
-    ? "Boa tarde! Sou Renato"
-    : "Boa noite! Sou Renato";
+    ? "Olá,Boa tarde! Sou Renato Paiva"
+    : "Olá,Boa noite! Sou Renato Paiva";
 
 greetingElement.textContent = greetingMessage;

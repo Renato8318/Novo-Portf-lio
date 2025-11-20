@@ -153,6 +153,12 @@
         font-size: 28px; /* Reduz o título das seções para caber melhor */
         margin-bottom: 40px;
     }
+
+    /* Ajusta a imagem do topo para não estourar em telas pequenas */
+    .topo-site .img-topo-site img{
+        width: 100%;
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+    }
 }
 
 /* Regra para esconder o botão de menu mobile em telas grandes */

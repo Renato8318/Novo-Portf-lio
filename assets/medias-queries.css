@@ -133,10 +133,6 @@
         font-size: 28px; /* Aumenta um pouco o título para melhor leitura */
     }
 
-    section.skills, section.hobbies{
-        columns: 2;
-    }
-
     section.hobbies{
         gap: 70px;
     }

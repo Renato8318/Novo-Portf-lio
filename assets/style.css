@@ -373,7 +373,7 @@ section.projetos .interface {
     position: absolute;
     top: 55%; /* Ajusta a altura vertical das setas */
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo mais sutil */
     border: 1px solid #fff;
     border-radius: 50%;
     width: 50px;
@@ -382,13 +382,16 @@ section.projetos .interface {
     color: #fff;
     cursor: pointer;
     z-index: 10;
-    transition: background-color 0.2s;
+    opacity: 0.4; /* Deixa a seta mais transparente por padrão */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
 }
 .arrow-btn:hover {
-    background-color: rgba(255, 124, 233, 0.5);
+    opacity: 1; /* Totalmente visível no hover */
+    background-color: rgba(255, 124, 233, 0.3); /* Efeito de hover mais discreto */
+    transform: translateY(-50%) scale(1.1); /* Adiciona um leve zoom no hover */
 }
-.arrow-left { left: 15px; }
-.arrow-right { right: 15px; }
+.arrow-left { left: -25px; } /* Move para fora da borda do conteúdo */
+.arrow-right { right: -25px; } /* Move para fora da borda do conteúdo */
 
 section.projetos .flex {
     /* Estilos para o Carrossel */

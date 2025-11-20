@@ -280,9 +280,8 @@ section.skills {
 section.skills .interface {
     position: relative;
 }
-.skills-arrow-left { left: 15px; }
-.skills-arrow-right { right: 15px; }
-
+.skills-arrow-left { left: -50px; } /* Posição para telas grandes */
+.skills-arrow-right { right: -50px; } /* Posição para telas grandes */
 section.skills .flex {
     /* Estilos para o Carrossel */
     flex-wrap: nowrap;
@@ -382,7 +381,7 @@ section.projetos .interface {
     color: #fff;
     cursor: pointer;
     z-index: 10;
-    opacity: 0.4; /* Deixa a seta mais transparente por padrão */
+    opacity: 0.3; /* Opacidade um pouco maior para visibilidade */
     transition: all 0.3s ease; /* Transição suave para todas as propriedades */
 }
 .arrow-btn:hover {
@@ -390,8 +389,8 @@ section.projetos .interface {
     background-color: rgba(255, 124, 233, 0.3); /* Efeito de hover mais discreto */
     transform: translateY(-50%) scale(1.1); /* Adiciona um leve zoom no hover */
 }
-.arrow-left { left: -25px; } /* Move para fora da borda do conteúdo */
-.arrow-right { right: -25px; } /* Move para fora da borda do conteúdo */
+.arrow-left { left: -50px; } /* Posição para telas grandes */
+.arrow-right { right: -50px; } /* Posição para telas grandes */
 
 section.projetos .flex {
     /* Estilos para o Carrossel */
@@ -488,9 +487,8 @@ section.conquistas {
 section.conquistas .interface {
     position: relative;
 }
-.conquistas-arrow-left { left: 15px; }
-.conquistas-arrow-right { right: 15px; }
-
+.conquistas-arrow-left { left: -50px; } /* Posição para telas grandes */
+.conquistas-arrow-right { right: -50px; } /* Posição para telas grandes */
 section.conquistas .flex {
     /* Estilos para o Carrossel */
     flex-wrap: nowrap;

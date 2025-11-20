@@ -86,7 +86,6 @@
     section.conquistas .flex{
         flex-direction: row; /* Garante que o carrossel continue na horizontal */
         overflow-x: auto; /* Garante a rolagem horizontal */
-        margin: 0 auto;
     }
 
     section.conquistas .flex .img-conquistas{
@@ -113,6 +112,14 @@
     .contato__formulario textarea {
         width: 100%; /* Faz o formulário ser responsivo */
         max-width: 600px; /* Impede que fique maior que o design original */
+    }
+
+    /* Ajusta a posição das setas para telas menores, evitando que saiam da tela */
+    .arrow-left, .skills-arrow-left, .conquistas-arrow-left {
+        left: 10px;
+    }
+    .arrow-right, .skills-arrow-right, .conquistas-arrow-right {
+        right: 10px;
     }
 }
 

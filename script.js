@@ -137,10 +137,19 @@ document.addEventListener('DOMContentLoaded', () => {
 // Lógica para o botão "Voltar ao Topo"
 const backToTopButton = document.getElementById('back-to-top-btn');
 
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) { // Mostra o botão depois de rolar 300px
-        backToTopButton.classList.add('show');
-    } else {
-        backToTopButton.classList.remove('show');
-    }
+const footer = document.querySelector('footer');
+
+const footerObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Se o rodapé está visível, mostra o botão
+            backToTopButton.classList.add('show');
+        } else {
+            // Se o rodapé não está visível, esconde o botão
+            backToTopButton.classList.remove('show');
+        }
+    });
 });
+
+// Inicia a observação do rodapé
+footerObserver.observe(footer);

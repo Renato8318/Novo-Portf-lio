@@ -141,6 +141,12 @@
         width: 100%;
         white-space: nowrap;
     }
+
+    /* Afasta o botão "Voltar ao Topo" da borda em telas menores */
+    #back-to-top-btn {
+        right: 15px;
+        bottom: 15px;
+    }
 }
 
 /* CELULARES - max-width: 531px (cobre 480px e menores) */

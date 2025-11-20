@@ -4,7 +4,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    user-select: none;
 }
 
 html {
@@ -130,6 +129,7 @@ header nav.menu-desktop ul li {
 .menu-mobile {
     /* Efeito de vidro fosco (Frosted Glass) */
     background-color: rgba(18, 18, 18, 0.8); /* Fundo preto com 80% de opacidade */
+    -webkit-backdrop-filter: blur(10px); /* Para compatibilidade com Safari */
     backdrop-filter: blur(10px); /* Desfoca o conteúdo atrás do menu */
     height: 100vh;
     position: fixed;
@@ -168,7 +168,6 @@ header nav.menu-desktop ul li {
 
 /* Estilo para o link ativo no menu mobile */
 .menu-mobile nav ul li a.active {
-    /* Aplica o mesmo gradiente dos títulos */
     background-image: linear-gradient(145deg, #ff7ce9 0, #ff70eb 16.67%, #ff5de8 33.33%, #dc45e1 50%, #b42fda 66.67%, #8c27d7 83.33%, #6129d8 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -233,7 +232,6 @@ h2.title {
     font-size: 38px;
     text-align: center;
     margin-bottom: 60px;
-    /* Aplica o mesmo gradiente dos botões */
     background-image: linear-gradient(145deg, #ff7ce9 0, #ff70eb 16.67%, #ff5de8 33.33%, #dc45e1 50%, #b42fda 66.67%, #8c27d7 83.33%, #6129d8 100%);
     background-clip: text;
     -webkit-background-clip: text; /* Para compatibilidade com Chrome/Safari */

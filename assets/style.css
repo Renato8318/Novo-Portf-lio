@@ -346,14 +346,50 @@ section.projetos {
     box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.5);
 }
 
+/* Estilos para as setas do carrossel */
+section.projetos .interface {
+    position: relative; /* Necessário para posicionar as setas */
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 55%; /* Ajusta a altura vertical das setas */
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.2s;
+}
+.arrow-btn:hover {
+    background-color: rgba(255, 124, 233, 0.5);
+}
+.arrow-left { left: 15px; }
+.arrow-right { right: 15px; }
+
 section.projetos .flex {
-    flex-wrap: wrap;
-    gap: 80px;
+    /* Estilos para o Carrossel */
+    flex-wrap: nowrap; /* Impede que os itens quebrem a linha */
+    gap: 40px; /* Reduz o espaçamento para o carrossel */
     margin-top: 60px;
+    padding: 20px;
+    overflow-x: auto; /* Habilita o scroll horizontal */
+
+    /* Esconde a barra de rolagem para um visual mais limpo */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+section.projetos .flex::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
 }
 
 .img-projetos {
-    width: 360px;
+    flex: 0 0 360px; /* Define um tamanho base fixo para os cards */
     height: 460px;
     background-size: cover; /* Revertido para 'cover' para preencher o espaço */
     background-position: center;
@@ -361,7 +397,6 @@ section.projetos .flex {
     border-radius: 40px;
     position: relative;
     border: 1px solid #fff;
-    margin-bottom: 25px;
     overflow: hidden;
     transition: all 0.4s ease-in-out;
     cursor: pointer;
@@ -428,10 +463,28 @@ section.conquistas {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+/* Estilos para as setas do carrossel de conquistas */
+section.conquistas .interface {
+    position: relative;
+}
+.conquistas-arrow-left { left: 15px; }
+.conquistas-arrow-right { right: 15px; }
+
 section.conquistas .flex {
+    /* Estilos para o Carrossel */
+    flex-wrap: nowrap;
     gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center; /* Centraliza os certificados na linha */
+    padding: 20px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+section.conquistas .flex::-webkit-scrollbar {
+    display: none;
+}
+
+.img-conquistas {
+    flex: 0 0 350px; /* Tamanho base para os cards de certificado */
 }
 
 .conquistas .img-conquistas img {
@@ -439,6 +492,7 @@ section.conquistas .flex {
     padding: 20px 0;
     border-radius: 5px;
     transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    width: 100%; /* Garante que a imagem preencha o contêiner */
     cursor: pointer;
 }
 

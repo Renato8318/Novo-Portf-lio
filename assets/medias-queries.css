@@ -60,15 +60,13 @@
         padding: 80px 8%;
     }
 
-    .img-projetos{
-        width: 100%;
-        max-width: 360px;
-        margin: 0 auto;
+    /* Garante que o carrossel de projetos continue na horizontal */
+    section.projetos .flex {
+        flex-direction: row;
     }
 
-    section.projetos .flex{
-        gap: 80px;
-        margin: 0 auto;
+    .img-projetos{
+        flex-basis: 90%; /* Em telas menores, cada projeto ocupa 90% da largura */
     }
 
     /* Conquistas */

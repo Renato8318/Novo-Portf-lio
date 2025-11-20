@@ -68,7 +68,70 @@ function typeWriterEffect() {
     textElement.style.animationFillMode = 'forwards';
 }
 
-document.addEventListener('DOMContentLoaded', typeWriterEffect);
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicializa o efeito de digitação
+    typeWriterEffect();
+
+    // --- Lógica Genérica para Carrossel Infinito ---
+    function setupCarousel(containerId, leftArrowClass, rightArrowClass) {
+        const carousel = document.getElementById(containerId);
+        const leftArrow = document.querySelector(leftArrowClass);
+        const rightArrow = document.querySelector(rightArrowClass);
+
+        if (!carousel || !leftArrow || !rightArrow) return;
+
+        const items = Array.from(carousel.children);
+        if (items.length === 0) return;
+
+        // Verifica se a largura total dos itens é menor que a do contêiner
+        const totalItemsWidth = items.reduce((acc, item) => acc + item.offsetWidth, 0) + (items.length * 40);
+
+        if (totalItemsWidth <= carousel.clientWidth) {
+            // Se não precisar rolar, esconde as setas e centraliza os itens
+            leftArrow.style.display = 'none';
+            rightArrow.style.display = 'none';
+            carousel.style.justifyContent = 'center';
+            return; // Encerra a função aqui
+        }
+
+        const scrollAmount = items[0].offsetWidth + 40; // Largura do card + gap
+        let isScrolling = false;
+
+        // Clonar itens para criar o loop
+        const itemsToClone = Math.min(items.length, 5);
+        for (let i = 0; i < itemsToClone; i++) {
+            const clone = items[i].cloneNode(true);
+            carousel.appendChild(clone);
+        }
+
+        function handleScroll(direction) {
+            if (isScrolling) return;
+            isScrolling = true;
+
+            const scrollEnd = carousel.scrollWidth - carousel.clientWidth;
+
+            if (direction === 'right') {
+                carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                if (carousel.scrollLeft >= scrollEnd - scrollAmount) {
+                    setTimeout(() => {
+                        carousel.scrollTo({ left: carousel.scrollLeft - (items.length * scrollAmount), behavior: 'auto' });
+                    }, 300); // Animação mais rápida
+                }
+            } else if (direction === 'left') {
+                carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            }
+
+            setTimeout(() => { isScrolling = false; }, 300); // Prevenção de clique mais rápida
+        }
+
+        leftArrow.addEventListener('click', () => handleScroll('left'));
+        rightArrow.addEventListener('click', () => handleScroll('right'));
+    }
+
+    // Inicializa os dois carrosséis
+    setupCarousel('carousel-container', '.arrow-left', '.arrow-right');
+    setupCarousel('conquistas-carousel-container', '.conquistas-arrow-left', '.conquistas-arrow-right');
+});
 
 // Lógica para o botão "Voltar ao Topo"
 const backToTopButton = document.getElementById('back-to-top-btn');

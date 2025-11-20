@@ -145,7 +145,7 @@
     /* Afasta o botão "Voltar ao Topo" da borda em telas menores */
     #back-to-top-btn {
         right: 15px;
-        bottom: 15px;
+        bottom: 60px; /* Aumenta a distância da parte inferior */
     }
 }
 

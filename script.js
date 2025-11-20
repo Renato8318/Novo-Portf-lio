@@ -2,20 +2,32 @@
 let bntMenu = document.getElementById('btn-menu');
 let menu = document.getElementById('menu-mobile');
 let overlay = document.getElementById('overlay-menu');
+let closeBtn = document.querySelector('.menu-mobile .btn-close');
+const mobileLinks = document.querySelectorAll('.menu-mobile nav a');
 
 // Adicionando um evento às variáveis
 // para abrir menu
 bntMenu.addEventListener('click', ()=>{
     menu.classList.add('abrir-menu');
 });
-
-// para fechar menu
-menu.addEventListener('click', ()=>{
+ 
+// Função para fechar o menu
+function fecharMenu() {
     menu.classList.remove('abrir-menu');
-});
+}
 
-overlay.addEventListener('click', ()=>{
-    menu.classList.remove('abrir-menu');
+// Adiciona eventos de clique para fechar o menu
+closeBtn.addEventListener('click', fecharMenu);
+overlay.addEventListener('click', fecharMenu);
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        // Remove a classe 'active' de todos os links antes de adicionar na nova
+        mobileLinks.forEach(l => l.classList.remove('active'));
+        // Adiciona a classe 'active' ao link clicado
+        link.classList.add('active');
+        fecharMenu(); // Fecha o menu após o clique
+    });
 });
 
 // Animações

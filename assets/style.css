@@ -128,7 +128,9 @@ header nav.menu-desktop ul li {
 }
 
 .menu-mobile {
-    background-color: #121212;
+    /* Efeito de vidro fosco (Frosted Glass) */
+    background-color: rgba(18, 18, 18, 0.8); /* Fundo preto com 80% de opacidade */
+    backdrop-filter: blur(10px); /* Desfoca o conteúdo atrás do menu */
     height: 100vh;
     position: fixed;
     top: 0;
@@ -162,6 +164,17 @@ header nav.menu-desktop ul li {
 .menu-mobile nav ul li a:hover {
     background-color: #ff7ce9;
     color: #121212;
+}
+
+/* Estilo para o link ativo no menu mobile */
+.menu-mobile nav ul li a.active {
+    /* Aplica o mesmo gradiente dos títulos */
+    background-image: linear-gradient(145deg, #ff7ce9 0, #ff70eb 16.67%, #ff5de8 33.33%, #dc45e1 50%, #b42fda 66.67%, #8c27d7 83.33%, #6129d8 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color: transparent;
+    font-weight: 600; /* Deixa o texto um pouco mais forte */
 }
 
 .menu-mobile .btn-close {

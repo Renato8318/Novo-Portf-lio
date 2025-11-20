@@ -210,6 +210,20 @@ header nav.menu-desktop ul li {
     50% { border-color: #fff; }
 }
 
+/* Estilo para os Títulos das Seções */
+h2.title {
+    color: #fff; /* Cor de fallback para navegadores antigos */
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 60px;
+    /* Aplica o mesmo gradiente dos botões */
+    background-image: linear-gradient(145deg, #ff7ce9 0, #ff70eb 16.67%, #ff5de8 33.33%, #dc45e1 50%, #b42fda 66.67%, #8c27d7 83.33%, #6129d8 100%);
+    background-clip: text;
+    -webkit-background-clip: text; /* Para compatibilidade com Chrome/Safari */
+    -moz-background-clip: text; /* Para compatibilidade com Firefox */
+    color: transparent; /* Deixa o texto transparente para mostrar o gradiente */
+}
+
 /* ----- Main------ */
 /* Topo do site */
 main .img-topo-site img {
@@ -297,11 +311,6 @@ section.hobbies .flex {
     gap: 60px;
 }
 
-.hobbies h2 {
-    color: #fff;
-    margin-bottom: 10px;
-}
-
 .hobbies i {
     font-size: 25px;
 }
@@ -342,7 +351,7 @@ section.projetos .flex {
 .img-projetos {
     width: 360px;
     height: 460px;
-    background-size: cover;
+    background-size: cover; /* Revertido para 'cover' para preencher o espaço */
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 40px;
@@ -379,10 +388,6 @@ section.projetos .flex {
 /* Aplica a animação na imagem e não na div inteira */
 section.projetos .img-projetos:hover img {
     animation: carrossel-move 0.8s infinite alternate ease-in-out;
-}
-
-section.projetos h2 {
-    color: #fff;
 }
 
 /* Overlay de foco na imagem */
@@ -422,12 +427,20 @@ section.conquistas {
 section.conquistas .flex {
     gap: 40px;
     flex-wrap: wrap;
+    justify-content: center; /* Centraliza os certificados na linha */
 }
 
 .conquistas .img-conquistas img {
     max-width: 350px;
     padding: 20px 0;
     border-radius: 5px;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave */
+    cursor: pointer;
+}
+
+.conquistas .img-conquistas img:hover {
+    transform: scale(1.25); /* Aumenta a imagem em 25% */
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra para dar profundidade */
 }
 
 /* Section Contato */
@@ -440,10 +453,6 @@ section.contato {
 section.contato .flex {
     padding-top: 20px;
     gap: 20px;
-}
-
-.contato h2 {
-    color: #fff;
 }
 
 .contato span {

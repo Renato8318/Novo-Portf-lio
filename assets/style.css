@@ -7,6 +7,10 @@
     user-select: none;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: #121212; /* Mantendo fundo escuro */
     color: #fff; /* Cor do texto padrão */
@@ -554,6 +558,23 @@ footer .line-footer p {
     font-size: 14px;
 }
 
+/* Botão Voltar ao Topo */
+#back-to-top-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    font-size: 40px;
+    color: #ff7ce9;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1000;
+}
+
+#back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+}
 
 /* Animações */
 .hidden {

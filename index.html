@@ -182,7 +182,7 @@
                         <div class="img-projetos" style="background-image: url(./assets/imagens/PrimeFlix.png); background-position: center top;">
                             <div class="overlay"><a href="https://github.com/Renato8318/Prime-Flix" target="_blank">Prime-Flix</a></div>
                         </div>
-                        <div class="img-projetos" style="background-image: url(./assets/imagens/Calculadora.png); background-position: center top;">
+                        <div class="img-projetos" style="background-image: url(./assets/imagens/Calculadora.png); background-position: center 30%;">
                             <div class="overlay"><a href="https://github.com/Renato8318/Calculadora-Simples/tree/main" target="_blank">Calculadora</a></div>
                         </div>
                     </div>
@@ -214,18 +214,22 @@
 
                         <form class="contato__formulario" data-formulario>
                             <div>
-                                <input type="text" name="nome" placeholder="Nome" minlength="3" required>
+                                <label for="nome" class="sr-only">Nome</label>
+                                <input id="nome" type="text" name="nome" placeholder="Nome" minlength="3" required>
                                 <span class="mensagem-erro"></span>
                             </div>
                             <div>
-                                <input type="email" name="email" placeholder="E-mail" minlength="4" required>
+                                <label for="email" class="sr-only">E-mail</label>
+                                <input id="email" type="email" name="email" placeholder="E-mail" minlength="4" required>
                                 <span class="mensagem-erro"></span>
                             </div>
                             <div>
-                                <input type="text" name="assunto" placeholder="Assunto" maxlength="50" required>
+                                <label for="assunto" class="sr-only">Assunto</label>
+                                <input id="assunto" type="text" name="assunto" placeholder="Assunto" maxlength="50" required>
                                 <span class="mensagem-erro"></span>
                             </div>
                                 <div>
+                                <label for="mensagem" class="sr-only">Mensagem</label>
                                 <textarea name="mensagem" id="mensagem" placeholder="Mensagem" maxlength="500" required></textarea>
                                 <span class="mensagem-erro"></span>
                             </div>
@@ -247,6 +251,8 @@
                 </div>
             </div>
         </footer>
+
+        <a href="#" id="back-to-top-btn" title="Voltar ao topo"><i class="bi bi-arrow-up-circle"></i></a>
 
         <script src="contato.js" type="module"></script>
     </body>

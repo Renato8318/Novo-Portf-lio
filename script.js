@@ -69,3 +69,14 @@ function typeWriterEffect() {
 }
 
 document.addEventListener('DOMContentLoaded', typeWriterEffect);
+
+// Lógica para o botão "Voltar ao Topo"
+const backToTopButton = document.getElementById('back-to-top-btn');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) { // Mostra o botão depois de rolar 300px
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});

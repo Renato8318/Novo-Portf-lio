@@ -276,13 +276,29 @@ section.skills {
     background: #1a1a1a;
 }
 
+/* Estilos para as setas do carrossel de skills */
+section.skills .interface {
+    position: relative;
+}
+.skills-arrow-left { left: 15px; }
+.skills-arrow-right { right: 15px; }
+
 section.skills .flex {
-    gap: 60px;
+    /* Estilos para o Carrossel */
+    flex-wrap: nowrap;
+    gap: 40px;
+    padding: 20px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+section.skills .flex::-webkit-scrollbar {
+    display: none;
 }
 
 .skills .box {
+    flex: 0 0 250px; /* Tamanho base para os cards de skills */
     color: #fff;
-    width: 250px;
     padding: 30px;
     margin-top: 40px;
     border-radius: 20px;
@@ -310,9 +326,11 @@ section.hobbies {
     padding: 40px 4%;
 }
 
+/* Estilos para as setas do carrossel de hobbies */
+
 section.hobbies .flex {
     justify-content: space-between;
-    gap: 60px;
+    gap: 40px;
 }
 
 .hobbies i {

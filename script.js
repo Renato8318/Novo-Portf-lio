@@ -131,6 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializa os dois carrosséis
     setupCarousel('carousel-container', '.arrow-left', '.arrow-right');
     setupCarousel('conquistas-carousel-container', '.conquistas-arrow-left', '.conquistas-arrow-right');
+    setupCarousel('skills-carousel-container', '.skills-arrow-left', '.skills-arrow-right');
 });
 
 // Lógica para o botão "Voltar ao Topo"

@@ -44,6 +44,12 @@
         padding: 40px 8%;
     }
 
+    /* Garante que o carrossel de skills continue na horizontal */
+    section.skills .flex {
+        flex-direction: row;
+        overflow-x: auto; /* Garante a rolagem horizontal */
+    }
+
     section.skills .box {
         margin: 0 auto;
     }
@@ -78,6 +84,8 @@
     }
 
     section.conquistas .flex{
+        flex-direction: row; /* Garante que o carrossel continue na horizontal */
+        overflow-x: auto; /* Garante a rolagem horizontal */
         margin: 0 auto;
     }
 

@@ -115,6 +115,10 @@
     }
 
     /* Ajusta a posição das setas para telas menores, evitando que saiam da tela */
+    .arrow-left, .skills-arrow-left, .conquistas-arrow-left,
+    .arrow-right, .skills-arrow-right, .conquistas-arrow-right {
+        position: absolute; /* Garante a sobreposição */
+    }
     .arrow-left, .skills-arrow-left, .conquistas-arrow-left {
         left: 10px;
     }

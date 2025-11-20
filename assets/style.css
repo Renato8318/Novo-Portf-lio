@@ -21,6 +21,22 @@ body {
     display: flex;
 }
 
+/* Classe para os links sociais, substituindo o button aninhado */
+.btn-social {
+    display: inline-flex; /* Para alinhar o ícone dentro do link */
+    align-items: center;
+    justify-content: center;
+    border-radius: 50% 20%;
+    margin: 0 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: #fff;
+    color: #121212;
+    border: 1px solid #ffffff;
+    transition: .2s;
+    text-decoration: none; /* Remove sublinhado do link */
+}
+
 /* Ícones de Contatos */
 .btn-contatos button {
     border-radius: 50% 20%;
@@ -38,8 +54,8 @@ body {
     color: #121212; /* Cor dos ícones visíveis */
 }
 
-/* Hover nos botões */
-.btn-contatos button:hover {
+/* Hover nos botões e links sociais */
+.btn-contatos button:hover, .btn-social:hover {
     box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
     transform: scale(1.05);
     color: #fff;
@@ -47,7 +63,7 @@ body {
     border: none;
 }
 
-.btn-contatos button:hover i {
+.btn-contatos button:hover i, .btn-social:hover i {
     color: #ff00b3; /* Cor ao passar o mouse (roxa) */
 }
 
@@ -64,6 +80,18 @@ header > .interface {
 
 #logo img {
     width: 60px;
+}
+
+/* Estilo para o Logo de Texto (Opção 3) */
+.logo-link {
+    text-decoration: none;
+}
+.logo-texto {
+    font-size: 28px;
+    color: #fff;
+}
+.logo-texto span {
+    color: #ff7ce9;
 }
 
 header a {
@@ -148,6 +176,38 @@ header nav.menu-desktop ul li {
     top: 0;
     z-index: 88888;
     display: none;
+}
+
+/* Faixa de Boas-Vindas Interativa */
+.welcome-banner {
+    padding: 20px 4%;
+    background: linear-gradient(270deg, #6129d8, #dc45e1, #ff7ce9);
+    background-size: 400% 400%;
+    animation: gradient-animation 15s ease infinite;
+}
+
+.welcome-banner p {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    /* Efeito do cursor piscando */
+    border-right: 3px solid #fff; /* Cursor */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0; /* Começa com largura zero */
+    animation: cursor-blink .75s step-end infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes cursor-blink {
+    from, to { border-color: transparent }
+    50% { border-color: #fff; }
 }
 
 /* ----- Main------ */
@@ -294,6 +354,15 @@ section.projetos .flex {
     cursor: pointer;
 }
 
+/* Ajuste para quando usar a tag <img> dentro de .img-projetos */
+.img-projetos img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem cubra todo o espaço sem distorcer */
+    border-radius: 40px; /* Mantém o arredondamento */
+    transition: all 0.4s ease-in-out;
+}
+
 /* Animação contínua para carrossel */
 @keyframes carrossel-move {
     0% {
@@ -307,7 +376,8 @@ section.projetos .flex {
     }
 }
 
-section.projetos .img-projetos:hover {
+/* Aplica a animação na imagem e não na div inteira */
+section.projetos .img-projetos:hover img {
     animation: carrossel-move 0.8s infinite alternate ease-in-out;
 }
 
@@ -459,6 +529,23 @@ textarea {
     border-radius: 50%;
 }
 
+/* === RODAPÉ === */
+footer {
+    padding: 30px 4%;
+    background-color: #1a1a1a;
+    border-top: 1px solid #333;
+}
+
+footer .line-footer {
+    text-align: center;
+}
+
+footer .line-footer p {
+    color: #8c8c8c; /* Cor cinza para o texto */
+    font-size: 14px;
+}
+
+
 /* Animações */
 .hidden {
     opacity: 0;
@@ -473,8 +560,3 @@ textarea {
     transform: translateX(0);
     transition: all 2s;
 }
-
-
-
-
-

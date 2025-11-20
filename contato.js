@@ -12,8 +12,8 @@ formulario.addEventListener("submit", (e) => {
     };
 
     localStorage.setItem("cadastro", JSON.stringify(listaResposta));
-    // Redirecionar para uma página de agradecimento
-    // window.location.href = 'thanks.html';
+    // Redireciona o usuário para a página de agradecimento após o envio.
+    window.location.href = 'thanks.html';
 });
 
 // “blur” (desfoque do campo de digitação)
@@ -57,7 +57,6 @@ function verificaCampo(campo) {
     tiposErros.forEach(erro => {
         if(campo.validity[erro]) {
             mensagem = mensagens[campo.name][erro];
-            console.log(mensagem);
         }
     });
 

@@ -49,3 +49,23 @@ const greetingMessage =
     : "Olá,Boa noite! Sou Renato Paiva";
 
 greetingElement.textContent = greetingMessage;
+
+// Efeito de Digitação na Faixa de Boas-Vindas
+function typeWriterEffect() {
+    const textElement = document.getElementById('typing-text');
+    if (!textElement) return;
+
+    const text = "Seja bem-vindo ao meu universo digital!";
+    textElement.innerHTML = text; // Coloca o texto de uma vez
+
+    // Calcula a duração da animação baseada no tamanho do texto
+    const typingSpeed = 3.5; // segundos
+    const textLength = text.length;
+
+    // Adiciona a animação de digitação via CSS
+    textElement.style.width = `${textLength}ch`; // 'ch' é a largura de um caractere '0'
+    textElement.style.animation += `, typing ${typingSpeed}s steps(${textLength})`;
+    textElement.style.animationFillMode = 'forwards';
+}
+
+document.addEventListener('DOMContentLoaded', typeWriterEffect);

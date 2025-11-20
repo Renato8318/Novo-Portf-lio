@@ -1,6 +1,7 @@
 /* Deixando o site responsivo */
-@media (max-width: 1102px){
-    /* Classes gerais */
+
+/* TELAS MÉDIAS E TABLETS (Ex: iPads na vertical) - max-width: 1080px */
+@media (max-width: 1080px){
     .flex{
         /* Inverte para coluna */
         flex-direction: column;
@@ -30,7 +31,8 @@
     }
 
     .topo-site .img-topo-site img{
-        width: 100%;
+        width: 100%; 
+        max-width: 300px; /* Limita o tamanho máximo da imagem */
     }
 
     section.topo-site .flex{
@@ -98,18 +100,20 @@
         gap: 20px;
     }
 
-    .contato__formulario input, .contato__formulario textarea{
-        width: 680px;
+    /* Ajusta o formulário para telas médias */
+    .contato__formulario input,
+    .contato__formulario textarea {
+        width: 100%; /* Faz o formulário ser responsivo */
+        max-width: 600px; /* Impede que fique maior que o design original */
     }
 }
 
-@media (max-width: 783px){
-    .contato__formulario input, .contato__formulario textarea{
-        width: 480px;
+/* TABLETS MENORES (Ex: iPads na horizontal, tablets Android) - max-width: 783px (próximo de 720px) */
+@media (max-width: 783px) {
+    .topo-site .txt-topo-site h1 {
+        font-size: 28px; /* Aumenta um pouco o título para melhor leitura */
     }
-}
 
-@media (min-width: 532px) and (max-width: 1103px){
     section.skills, section.hobbies{
         columns: 2;
     }
@@ -124,18 +128,17 @@
     }
 }
 
-@media (max-width: 531px){
+/* CELULARES - max-width: 531px (cobre 480px e menores) */
+@media (max-width: 531px) {
     section.skills, section.hobbies{
         columns: 1;
     }
 
-    .contato__formulario input, .contato__formulario textarea{
-        width: 280px;
+    h2.title {
+        font-size: 28px; /* Reduz o título das seções para caber melhor */
+        margin-bottom: 40px;
     }
 }
 
-@media (min-width: 1081px){
-    .btn-open{
-        display: none;
-    }
-}
+/* Regra para esconder o botão de menu mobile em telas grandes */
+@media (min-width: 1081px) { .btn-open{ display: none; } }
